@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+tom:
+  name: Tom Dooner
+  case_id: ted27
+  image: URL
+  is_admin: true
+
+james:
+  name: James Hale
+  case_id: jdh111
+  image: URL2
+  is_admin: true

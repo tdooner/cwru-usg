@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+standing_committees = ["Information Technology", "Public Relations", "Student Life", "Academic Affairs", "Finance"]
+
+standing_committees.each do |c|
+  Group.create({:name=>c, :kind=>"committee", :info=>"_Information coming soon!_", :blurb=>"_Information coming soon!_"})
+end
