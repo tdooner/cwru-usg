@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+studentlife:
+  name: Student Life Committee
+  type: committee
+  info: This is a committee!
+  blurb: We do things!
+  vp_id: james
+
+informationtechnology:
+  name: Information Technology Committee
+  type: committee
+  info: "Hey, its another committee!"
+  blurb: "Check it out, man!"
+  vp_id: tom
