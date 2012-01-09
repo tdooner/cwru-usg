@@ -1,0 +1,36 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+      %title Undergraduate Student Government - USG
+      = stylesheet_link_tag "application"
+      = javascript_include_tag "application"
+      = csrf_meta_tag
+  %body
+    %header#header
+      #container
+        #name
+          %a{:href => "#"}
+            %img#logo{:src => "images/USGLogo.png"}/
+            %strong Undergraduate Student Government
+        #navigation
+          %span.about.on
+            %a{:href => "#"} About us
+          %span.things
+            %a{:href => "#"} Resources
+    #top-bar
+      #container
+        #slider
+          %img{:alt => "", :src => "images/walle.jpg"}/
+        #button-wrapper
+          %span.search
+            %input{:name => "q", :type => "text"}/
+          %span.button
+            %a{:href => "#"} Send Feedback
+          %span.button.last
+            %a{:href => "#"} Disbursements
+    #container
+      =yield
+    %footer#footer
+      #container
+        Some rando footer text.

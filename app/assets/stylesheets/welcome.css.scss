@@ -1,0 +1,79 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#ga {
+  float:left;
+  background: #000;
+  border: 2px solid #bbb;
+  box-shadow: 0 8px 8px -4px gray;
+  width: 480px;
+  margin-top: 1em;
+  color: #fff;
+  padding-bottom: 1.3em;
+}
+
+#ga iframe {
+  margin-bottom: 1em;
+}
+
+#ga h1 {
+  display: inline;
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0;
+  margin-left: .4em;
+}
+
+#ga span {
+  display: inline;
+  font-size: 1.4em;
+  margin-left: 1.2em;
+}
+
+#ga span a {
+  color: #fff;
+  text-decoration:none;
+  padding: 6px;
+  border: 2px solid #7D7D7D;
+  border-radius: 8px;
+  vertical-align: 6px;
+}
+
+#ga span a:hover {
+  background: #444;
+}
+
+#events {
+  float:right;
+  width: 380px;
+  border: 2px solid #aaa;
+  margin-top: 1em;
+  padding: 1.1em;
+}
+
+#events h1 {
+  font-size: 3.2em;
+  margin: 0;
+}
+
+#events p {
+  font-size: 1.1em;
+  margin: .9em 0;
+}
+
+#events p .title {
+  display:block;
+  font-weight: 700;
+  margin-bottom: .3em;
+  font-size: 1.4em;
+}
+
+#events p .group {
+  display: block;
+  text-align: right;
+  font-family: 'Rosario', sans-serif;
+  text-transform: uppercase;
+  color: #888;
+}
+
