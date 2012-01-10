@@ -5,6 +5,8 @@ gem 'haml'
 gem 'sass'
 
 gem 'jquery-rails'
+gem 'thin'
+gem 'paperclip', '~> 2.4'
 
 group :development, :test do
 	gem 'sqlite3'
