@@ -15,32 +15,28 @@
       }
       
   %body
-    %header#header-small
+    %header#header
       #container
         #logo
-          %a{:href=>welcome_index_url}
-            =image_tag "logo.png", :class=>"logo"
+          =image_tag "logo.png", :class=>"logo"
+          %h1 Undergraduate Student Government
+          %ul
+            %li 
+              %a{:href=>"#"} Feedback Form →
+            %li 
+              %a{:href=>"#"} Submit a Disbursement →
+            %li
+              %a{:href=>"#"} Search → 
         #navigation
           %ul
             %li
               %a{:href => "#"} Resources
             %li
               %a{:href => "#"} About USG
-    #container.top-bar-small
+    #container.top-bar
       #right
-        %h1
-          Undergraduate Student Government
-        %div.breadcrumbs
-          %ul
-            %li 
-              %a{:href=>"#"} Home
-              %span.divider →
-            %li
-              %a{:href=>"#"} Committees
-              %span.divider →
-            %li
-              %a{:href=>"#"} Information Technology
-    #container.content.subpage
+        =image_tag "top_right.png", :class=>"logo"
+    #container.content
       =yield
     %footer#footer
       #container

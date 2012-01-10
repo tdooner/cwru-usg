@@ -2,7 +2,7 @@ CwruUsg::Application.routes.draw do
 
   get "welcome/index"
 
-  resources :group
+  resources :groups
   match 'committee/:id' => "group#show"
 
   # The priority is based upon order of creation:
