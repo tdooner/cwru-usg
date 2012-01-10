@@ -1,0 +1,13 @@
+%head
+  %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+  %title Undergraduate Student Government - USG
+  %link{:href=>'http://fonts.googleapis.com/css?family=Habibi',:rel=>'stylesheet',:type=>'text/css'}
+  = stylesheet_link_tag "application"
+  = javascript_include_tag "application"
+  = csrf_meta_tag
+  :javascript
+    $(function(){
+      $("body").noisy({
+        opacity: 0.07
+      });
+    }      
