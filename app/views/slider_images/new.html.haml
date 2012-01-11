@@ -1,0 +1,11 @@
+%h1 Add a slider image
+=form_for @slider_image do |f|
+	=f.error_messages
+	%p
+		=f.label :image, 'Image file:'
+		=f.file_field :image
+	%p
+		=f.label :caption, 'Caption:'
+		=f.text_field :caption
+	%p
+		=f.submit
