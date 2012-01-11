@@ -1,6 +1,6 @@
 !!! 5
 %html{:lang => "en"}
-  = render :partial=> "layouts/header"
+  = render :partial=> "layouts/header", :locals => {:is_home_page => false}
   %body
     %header#header-small
       #container

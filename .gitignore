@@ -18,3 +18,4 @@
 *.swp
 *~
 /app/assets/stylesheets/.sass-cache/
+.DS_Store

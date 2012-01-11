@@ -4,7 +4,7 @@
   %link{:href=>'http://fonts.googleapis.com/css?family=Habibi',:rel=>'stylesheet',:type=>'text/css'}
   = stylesheet_link_tag "application"
   = javascript_include_tag "application"
-  - if controller.controller_name == "welcome"
+  - if is_home_page
     = javascript_include_tag "nivo-slider"
   = csrf_meta_tag
   :javascript
@@ -12,4 +12,4 @@
       $("body").noisy({
         opacity: 0.07
       });
-    }      
+    });      
