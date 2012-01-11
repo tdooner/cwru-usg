@@ -81,6 +81,7 @@ header, footer {
         width:150px;
         position:absolute;
         display:none;
+        z-index:50;
       
         li {
           float:left;

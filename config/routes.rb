@@ -1,6 +1,8 @@
 CwruUsg::Application.routes.draw do
 
   get "welcome/index"
+  get "users/login"
+  get "users/logout"
 
   resources :groups
   resources :slider_images
