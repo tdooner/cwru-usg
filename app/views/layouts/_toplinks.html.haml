@@ -3,6 +3,20 @@
     %a{:href => "#"} Resources
   %li
     %a{:href => "#"} About USG
+    %ul.sub-menu
+      %li
+        %a{:href=>"#"} Something One
+      %li
+        %a{:href=>"#"} Something Two
+      %li
+        %a{:href=>"#"} Something Three
+      %li
+        %a{:href=>"#"} Something Four
+      %li
+        %a{:href=>"#"} Something Five
   - if @user && @user.is_admin
     %li
       %a{:href=>"#"}=(@user.name || @user.case_id)
+      %ul.sub-menu
+        %li
+          %a{:href=>users_logout_url} Log Out

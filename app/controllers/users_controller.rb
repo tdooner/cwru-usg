@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def login
     u = User.find_or_create_by_case_id(session[:cas_user])
+    redirect_to welcome_index_url
   end
 
   def logout
