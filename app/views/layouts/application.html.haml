@@ -8,11 +8,7 @@
           %a{:href=>welcome_index_url}
             =image_tag "logo.png", :class=>"logo"
         #navigation
-          %ul
-            %li
-              %a{:href => "#"} Resources
-            %li
-              %a{:href => "#"} About USG
+          =render :partial=>"layouts/toplinks"
     #container.top-bar-small
       #right
         %h1

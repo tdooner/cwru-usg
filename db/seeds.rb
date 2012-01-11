@@ -10,3 +10,6 @@ standing_committees = ["Information Technology", "Public Relations", "Student Li
 standing_committees.each do |c|
   Group.create({:name=>c, :kind=>"committee", :info=>"_Information coming soon!_", :blurb=>"_Information coming soon!_"})
 end
+
+User.create({:name => "Tom Dooner", :case_id => "ted27", :is_admin => true})
+User.create({:name => "James Hale", :case_id => "jdh111", :is_admin => true})

@@ -1,5 +1,21 @@
 CwruUsg::Application.routes.draw do
 
+<<<<<<< HEAD
+  get "slider_images/index"
+
+  get "slider_images/new"
+
+  get "slider_image/index"
+
+  get "slider_image/new"
+=======
+  get "users/login"
+
+  get "users/logout"
+
+  get "users/show"
+>>>>>>> upstream/master
+
   get "welcome/index"
 
   resources :groups
