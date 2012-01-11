@@ -1,0 +1,8 @@
+%h1 New GA
+=form_for(@ga, :url=>admin_gas_url) do |f|
+  %p Date:
+  =f.date_select :date
+  %br
+  %br
+  =f.submit
+  %p Add more fields later...

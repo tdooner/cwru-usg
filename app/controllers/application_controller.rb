@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_admin
-    return redirect_to(login_url) unless @user
+    return redirect_to(users_login_url) unless @user
     if !@user.is_admin
       return redirect_to(welcome_index_url)
     end

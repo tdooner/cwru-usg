@@ -6,6 +6,11 @@ CwruUsg::Application.routes.draw do
 
   resources :groups
   resources :slider_images
+
+  get "admin", :controller=>"admin/home", :action=>"index"
+  namespace :admin do
+    resources :gas
+  end
   
   match 'committee/:id' => "group#show"
 

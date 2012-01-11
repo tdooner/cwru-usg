@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2012-01-11
+  agenda_id: 1
+  minutes_id: 1
+  video: MyString
+  notes: MyText
+
+two:
+  date: 2012-01-11
+  agenda_id: 1
+  minutes_id: 1
+  video: MyString
+  notes: MyText

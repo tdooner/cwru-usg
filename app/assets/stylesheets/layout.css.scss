@@ -189,6 +189,11 @@ header, footer {
   p {
     font-size:1.8em;
   }
+  * { // h2 a, etc.
+    a {
+      font-size:inherit;
+    }
+  }
   min-height:400px;
 }
 #footer {
