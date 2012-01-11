@@ -13,3 +13,11 @@ end
 
 User.create({:name => "Tom Dooner", :case_id => "ted27", :is_admin => true})
 User.create({:name => "James Hale", :case_id => "jdh111", :is_admin => true})
+
+# Slider Images
+slider_images = ["nemo.jpg", "toystory.jpg", "up.jpg", "walle.jpg"]
+slider_images.each do |f|
+  s = SliderImage.new
+  s.image = File.open(Rails.root.join('db','fixtures',f))
+  s.save!
+end

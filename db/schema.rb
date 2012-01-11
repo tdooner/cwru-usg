@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20120110223321) do
   end
 
   create_table "slider_images", :force => true do |t|
-    t.string   "caption"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"

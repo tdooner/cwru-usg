@@ -4,7 +4,8 @@
   %link{:href=>'http://fonts.googleapis.com/css?family=Habibi',:rel=>'stylesheet',:type=>'text/css'}
   = stylesheet_link_tag "application"
   = javascript_include_tag "application"
-  = javascript_include_tag "nivo-slider"
+  - if controller.controller_name == "welcome"
+    = javascript_include_tag "nivo-slider"
   = csrf_meta_tag
   :javascript
     $(function(){

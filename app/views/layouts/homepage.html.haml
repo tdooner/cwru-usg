@@ -19,9 +19,9 @@
     #container.top-bar
       #right
         .slider-wrapper
-          .ribbon
-          #slider.nivoSlider
-            =image_tag "top_right.png", :class=>"logo", :title => "this is a caption"
+          #slider.nivo-slider
+            - @slider_images.each do |slider_image|
+              =image_tag slider_image.image.url(:full)
     #container.content
       =yield
     = render :partial => "layouts/footer"

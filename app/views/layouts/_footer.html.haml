@@ -1,3 +1,8 @@
 %footer#footer
+  - if controller.controller_name == "welcome"
+    :javascript
+      $(window).load(function() {
+        $('#slider').nivoSlider();
+      });
   #container
     Log In
