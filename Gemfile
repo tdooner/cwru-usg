@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 gem 'haml'
 gem 'sass'
+gem 'dynamic_form'
 
 gem 'jquery-rails'
 gem 'thin'
@@ -10,6 +11,10 @@ gem 'paperclip', '~> 2.4'
 
 group :development, :test do
 	gem 'sqlite3'
+end
+
+group :development do
+  gem 'haml-rails'
 end
 
 group :production do

@@ -41,11 +41,17 @@ GEM
       execjs
     coffee-script-source (1.2.0)
     daemons (1.1.5)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     eventmachine (0.12.10)
     execjs (1.2.13)
       multi_json (~> 1.0)
     haml (3.1.4)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.19)
@@ -123,7 +129,9 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.1.1)
+  dynamic_form
   haml
+  haml-rails
   jquery-rails
   paperclip (~> 2.4)
   rails (= 3.1.3)

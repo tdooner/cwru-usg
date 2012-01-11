@@ -1,8 +1,18 @@
 CwruUsg::Application.routes.draw do
 
+  get "slider_images/index"
+
+  get "slider_images/new"
+
+  get "slider_image/index"
+
+  get "slider_image/new"
+
   get "welcome/index"
 
   resources :groups
+  resources :slider_images
+  
   match 'committee/:id' => "group#show"
 
   # The priority is based upon order of creation:

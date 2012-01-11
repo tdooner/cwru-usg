@@ -22,7 +22,10 @@
               %a{:href => "#"} About USG
     #container.top-bar
       #right
-        =image_tag "top_right.png", :class=>"logo"
+        .slider-wrapper
+          .ribbon
+          #slider.nivoSlider
+            =image_tag "top_right.png", :class=>"logo", :title => "this is a caption"
     #container.content
       =yield
     = render :partial => "layouts/footer"
