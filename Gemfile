@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 gem 'haml'
 gem 'sass'
+gem 'rubycas-client'
 
 gem 'sqlite3'
 

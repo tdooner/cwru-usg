@@ -1,5 +1,11 @@
 CwruUsg::Application.routes.draw do
 
+  get "users/login"
+
+  get "users/logout"
+
+  get "users/show"
+
   get "welcome/index"
 
   resources :groups

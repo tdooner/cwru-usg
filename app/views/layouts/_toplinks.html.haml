@@ -1,0 +1,8 @@
+%ul
+  %li
+    %a{:href => "#"} Resources
+  %li
+    %a{:href => "#"} About USG
+  - if @user && @user.is_admin
+    %li
+      %a{:href=>"#"}=(@user.name || @user.case_id)

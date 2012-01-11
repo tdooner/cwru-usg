@@ -107,7 +107,6 @@ header, footer {
 
 .top-bar, .top-bar-small {
   padding-top:20px;
-  padding-bottom:30px;
 
   #right {
     margin-left:308px;
@@ -117,6 +116,7 @@ header, footer {
 }
 .top-bar {
   height:280px;
+  padding-bottom:30px;
 }
 .top-bar-small {
   height:100px;
@@ -148,7 +148,9 @@ header, footer {
   margin-bottom:24px;
 }
 #container.subpage { // Every page except the homepage.
-  font-size:1.8em;
+  p {
+    font-size:1.8em;
+  }
   min-height:400px;
 }
 #footer {
