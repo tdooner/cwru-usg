@@ -8,6 +8,7 @@ h1 {
   font-weight:400;
   font-size:2.6em;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 1px #CCC;
 }
 
 a {
@@ -28,7 +29,7 @@ header, footer {
 }
 
 #container {
-  width: 940px;
+  width: 950px;
   margin:auto;
   overflow: hidden;
   clear:both;
@@ -142,24 +143,31 @@ header, footer {
     li {
       text-align:right;
       padding-top:6px;
+      text-shadow: 1px 1px 1px #DDD;
     }
   }
 }
 
+/* Shared by the homepage and other pages */
 .top-bar, .top-bar-small {
   padding-top:20px;
 
   #right {
-    margin-left:379px;
+    margin-left:348px;
     width:589px;
     height:279px;
     text-align:center;
   }
 }
+/* Exclusively the homepage: */
 .top-bar {
   height:280px;
   padding-bottom:30px;
+  #right {
+    box-shadow:0 0 10px #555;
+  }
 }
+/* Exclusively other pages: */
 .top-bar-small {
   height:100px;
 
