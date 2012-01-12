@@ -1,0 +1,15 @@
+- if @ga.new_record?
+  - method = "POST"
+  - path = admin_gas_url
+- else
+  - method = "PUT"
+  - path = admin_ga_url(@ga)
+=form_for(@ga, :url=>path, :method=>method) do |f|
+  %p Date:
+  =f.date_select :date, :default => (@ga.date || (@last.date + 7.days))
+  %p Video Embed Code:
+  =f.text_area :video, :style=>"height:50px"
+  %p Notes:
+  =f.text_area :notes
+  %br
+  =f.submit

@@ -1,4 +1,22 @@
 %h1 List of GAs:
--@gas.each do |g|
-  %li=g.date
+%table
+  %thead
+    %th GA Date
+    %th Minutes
+    %th Agenda
+    %th Edit
+    %th Delete
+  %tbody 
+    -@gas.each do |g|
+      %tr
+        %td
+          %p=g.date
+        %td
+          %p=g.minutes_id
+        %td
+          %p=g.agenda_id
+        %td
+          %p=link_to "Edit", edit_admin_ga_url(g.id)
+        %td
+          %p=link_to "Delete", admin_ga_url(g.id), :method=>:delete
 %h2=link_to "New GA", new_admin_ga_url
