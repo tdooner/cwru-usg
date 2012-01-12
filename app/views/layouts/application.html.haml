@@ -14,15 +14,7 @@
         %h1
           Undergraduate Student Government
         %div.breadcrumbs
-          %ul
-            %li 
-              %a{:href=>"#"} Home
-              %span.divider →
-            %li
-              %a{:href=>"#"} Committees
-              %span.divider →
-            %li
-              %a{:href=>"#"} Information Technology
+          =breadcrumbs.render(:format=> :usg, :separator => "→")
     #container.content.subpage
       =yield
     = render :partial=>"layouts/footer"

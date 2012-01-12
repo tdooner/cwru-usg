@@ -1,5 +1,6 @@
 class Admin::GasController < ApplicationController
   before_filter :is_admin 
+  before_filter :breadcrumb
 
   def index
     @gas = Ga.find(:all, :order=>"date DESC")
@@ -28,12 +29,14 @@ class Admin::GasController < ApplicationController
   end
 
   def new
+    breadcrumbs.add("New")
     @ga = Ga.new
     @last = Ga.find(:first, :order => "date DESC")
 
   end
 
   def edit
+    breadcrumbs.add("Edit")
     @ga = Ga.find(params[:id])
   end
 
@@ -42,6 +45,10 @@ class Admin::GasController < ApplicationController
     @ga.delete
 
     redirect_to :admin_gas
+  end
+
+  def breadcrumb
+    breadcrumbs.add("GAs", admin_gas_url)
   end
 
 end

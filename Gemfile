@@ -5,6 +5,7 @@ gem 'haml'
 gem 'sass'
 gem 'dynamic_form'
 gem 'rubycas-client'
+gem 'breadcrumbs'
 
 gem 'jquery-rails'
 gem 'thin'
