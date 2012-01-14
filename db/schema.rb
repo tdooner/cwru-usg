@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120111181251) do
+ActiveRecord::Schema.define(:version => 20120113224055) do
 
   create_table "gas", :force => true do |t|
     t.date     "date"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(:version => 20120111181251) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "static_pages", :force => true do |t|
+    t.string   "title"
+    t.text     "contents"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

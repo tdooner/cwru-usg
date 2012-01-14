@@ -1,0 +1,25 @@
+=javascript_include_tag "https://raw.github.com/coreyti/showdown/master/src/showdown.js"
+:javascript
+  $(function() {
+    var c = new Showdown.converter();
+    $("textarea#static_page_contents").keyup(function() {
+      $("td#renderings").html( c.makeHtml(this.value) );
+    });
+  });
+%h1 New Static Content Page
+=form_for(@page, :url=>admin_pages_url) do |f|
+  %p=f.label :title, "Page Title:"
+  =f.text_field :title
+  %table
+    %thead
+      %th{:style=>"width:15%"}=f.label :contents, "Content:"
+      %th{:style=>"width:85%"}
+        %label Rendered:
+    %tbody
+      %tr
+        %td=f.text_area :contents,:rows=>20, :cols=>35
+        %td#renderings
+          %p 
+            A live preview of the site will occur here as you type in the box. You may format text using  
+            %a{:href=>"http://en.wikipedia.org/wiki/Markdown",:target=>"_new"} Markdown syntax.
+  =f.submit "Create Page!"

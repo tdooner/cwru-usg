@@ -1,15 +1,17 @@
 CwruUsg::Application.routes.draw do
-
   get "welcome/index"
   get "users/login"
   get "users/logout"
 
   resources :groups
   resources :slider_images
+  
+  match 'page/:name' => "admin/pages#show", :via=>:get, :as => :page
 
   get "admin", :controller=>"admin/home", :action=>"index"
   namespace :admin do
     resources :gas
+    resources :pages
   end
   
   match 'committee/:id' => "group#show"
