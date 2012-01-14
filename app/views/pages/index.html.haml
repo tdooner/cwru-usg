@@ -1,7 +1,20 @@
 %h1 Static Content Pages
-%ul
-  - @pages.each do |p|
-    %li
-      %p=link_to p.title, page_url(p.slug)
+%table
+  %thead
+    %th Page Title
+    %th Page Slug
+    %th Edit
+    %th Delete
+  %tbody
+    - @pages.each do |p|
+      %tr
+        %td
+          %p=p.title
+        %td
+          %p=p.slug
+        %td
+          %p=link_to "Edit", edit_admin_page_url(p)
+        %td
+          %p=link_to "Delete", admin_page_url(p), :method=>"DELETE"
 %h2
   =link_to "Make one!", new_admin_page_url

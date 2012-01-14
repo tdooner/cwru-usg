@@ -30,12 +30,18 @@ class PagesController < ApplicationController
     @page = StaticPage.find(params[:id])
   end
 
-  def list
-  end
-
   def show
     @page = StaticPage.find(params[:id]) if params[:id]
     @page = StaticPage.find_by_slug(params[:name]) if params[:name]
+  end
+
+  def destroy
+    @page = StaticPage.find(params[:id])
+    if !@page.destroy
+      flash[:error] = "Could not destroy page!"
+    end
+
+    redirect_to admin_pages_url
   end
 
 end
