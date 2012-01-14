@@ -1,0 +1,37 @@
+- if page.new_record?
+  - title="New Static Content Page"
+  - url=admin_pages_url
+  - method="POST"
+- else
+  - title="Edit Content Page -- #{page.title}"
+  - url=admin_page_url(page)
+  - method="PUT"
+=javascript_include_tag "https://raw.github.com/coreyti/showdown/master/src/showdown.js"
+:javascript
+  $(function() {
+    var c = new Showdown.converter();
+    $("textarea#static_page_contents").keyup(function() {
+      $("td#renderings").html( c.makeHtml(this.value) );
+    });
+  });
+%h1=title
+%table
+  %tbody
+    %tr
+      %td{:style=>"width:15%"}
+        =form_for(page, :url=>url, :method=>method) do |f|
+          %p=f.label :title, "Page Title:"
+          =f.text_field :title
+          %p=f.label :slug, "Page Slug:"
+          =f.text_field :slug
+          %p Note: The slug is a single word which points to this page. Only letters, hyphens, and underscores are permitted. For example, the "About USG" page might have a slug of "about-usg".
+          %p=f.label :contents, "Page Contents:"
+          =f.text_area :contents,:rows=>20, :cols=>35
+          =f.submit "Create Page!"
+      %td#renderings{:style=>"width:85%"}
+        - if page.contents
+          !=BlueCloth.new(page.contents).to_html
+        - else
+          %p 
+            A live preview of the site will occur here as you type in the box. You may format text using  
+            %a{:href=>"http://en.wikipedia.org/wiki/Markdown",:target=>"_new"} Markdown syntax.

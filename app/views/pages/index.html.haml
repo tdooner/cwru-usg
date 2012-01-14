@@ -1,6 +1,7 @@
 %h1 Static Content Pages
 %ul
   - @pages.each do |p|
-    %li=link_to p.title, page_url(p)
+    %li
+      %p=link_to p.title, page_url(p.slug)
 %h2
   =link_to "Make one!", new_admin_page_url

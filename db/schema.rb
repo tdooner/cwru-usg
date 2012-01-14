@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120113224055) do
+ActiveRecord::Schema.define(:version => 20120114023106) do
 
   create_table "gas", :force => true do |t|
     t.date     "date"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120113224055) do
     t.text     "contents"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "users", :force => true do |t|
